@@ -22,7 +22,7 @@ npm start
 ## Sitio
 
 - Inicio, presentación del estudio y acceso a contenidos.
-- Servicios, cuatro páginas de detalle con alcance, proceso y preguntas frecuentes.
+- Servicios, cuatro páginas de detalle con alcance, cinco etapas de trabajo interactivas, entregables, referencias visuales y preguntas frecuentes.
 - Proyectos, filtros y tres fichas individuales.
 - El estudio, filosofía y método de trabajo.
 - Contacto, formulario validado y WhatsApp oficial.
@@ -30,7 +30,9 @@ npm start
 
 El contenido se edita en `lib/content.ts`. Los componentes visuales están en `components/`, las rutas en `app/` y los recursos en `public/images/`.
 
-GSAP controla entradas de página, revelado de títulos y secciones, marquesina y progreso de lectura. Incluye pausa manual, limpieza al cambiar de ruta y respeto a `prefers-reduced-motion`. Las fuentes se alojan localmente mediante Fontsource. Las imágenes usan la optimización de Next.js.
+GSAP controla entradas de página, revelado de títulos y secciones, marquesina y progreso de lectura. Cada servicio incluye una demostración en bucle: diseño web responsive, compra online, flujo de tareas e identidad visual. Incluye pausa manual, pausa fuera de pantalla, limpieza al cambiar de ruta y respeto a `prefers-reduced-motion`. Las fuentes se alojan localmente mediante Fontsource. Las imágenes usan la optimización de Next.js.
+
+La experiencia de marca añade una precarga por sesión, transiciones entre páginas con el símbolo vectorial y sonidos breves en los botones principales. El visitante puede silenciar el sonido y su preferencia se conserva. Los SVG descargables están en `public/logo-symbol.svg` y `public/logo-lockup.svg`. El contenido adicional de servicios se edita en `lib/service-presentation.ts` y `lib/service-workflows.ts`.
 
 ## Supabase y Vercel
 
@@ -43,6 +45,8 @@ Sin conexión, el formulario muestra un error recuperable y ofrece WhatsApp; no 
 - [Auditoría, enfoque comercial y estrategia multipágina](docs/AUDITORIA-Y-ESTRATEGIA.md)
 - [Despliegue y configuración de datos](docs/DEPLOYMENT.md)
 - [Origen de imágenes y prompt de la pieza generada](docs/ASSETS.md)
+- [Imágenes y prompts de las demostraciones](docs/ASSETS-SERVICIOS.md)
+- [Precarga, transiciones, sonido y marca vectorial](docs/EXPERIENCIA-DE-MARCA.md)
 - [Verificación y límites](docs/VERIFICACION.md)
 
 Los precios, testimonios y métricas no verificadas de la web anterior no se trasladaron. Las capturas de proyectos se obtuvieron de la publicación original. La marca vectorial es una adaptación para interfaz del símbolo facilitado; los dos archivos originales se conservan intactos.

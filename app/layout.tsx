@@ -5,6 +5,8 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Motion } from "@/components/motion";
+import { BrandExperience } from "@/components/brand-experience";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -16,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="es"><body><a href="#contenido" className="skip-link">Saltar al contenido</a><Header/><Motion><main id="contenido">{children}</main></Motion><Footer/></body></html>;
+  return <html lang="es"><body><a href="#contenido" className="skip-link">Saltar al contenido</a><Header/><Motion><main id="contenido">{children}</main><BrandExperience/><WhatsAppButton/></Motion><Footer/></body></html>;
 }

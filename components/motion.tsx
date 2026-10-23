@@ -1,11 +1,14 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Pause, Play } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const MotionSettings = createContext({ paused: false });
+export const useMotionSettings = () => useContext(MotionSettings);
 
 export function Motion({ children }: { children: React.ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
@@ -16,9 +19,12 @@ export function Motion({ children }: { children: React.ReactNode }) {
     const ctx = gsap.context(() => {
       if (paused) return;
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.from(".page-enter", { y: 18, opacity: 0, duration: .65, ease: "power3.out", clearProps: "all" });
-        gsap.from(".hero-line > span", { yPercent: 112, rotate: 2, duration: 1.15, stagger: .12, ease: "power4.out", delay: .12, clearProps: "transform" });
-        gsap.from(".hero-art", { scale: 1.1, opacity: 0, duration: 1.5, ease: "power3.out", delay: .1, clearProps: "transform,opacity" });
+        const entrance = gsap.utils.toArray<HTMLElement>(".page-enter");
+        const heroLines = gsap.utils.toArray<HTMLElement>(".hero-line > span");
+        const heroArt = gsap.utils.toArray<HTMLElement>(".hero-art");
+        if (entrance.length) gsap.from(entrance, { y: 18, opacity: 0, duration: .65, ease: "power3.out", clearProps: "all" });
+        if (heroLines.length) gsap.from(heroLines, { yPercent: 112, rotate: 2, duration: 1.15, stagger: .12, ease: "power4.out", delay: .12, clearProps: "transform" });
+        if (heroArt.length) gsap.from(heroArt, { scale: 1.1, opacity: 0, duration: 1.5, ease: "power3.out", delay: .1, clearProps: "transform,opacity" });
         gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((element) => {
           gsap.from(element, { y: 38, opacity: 0, duration: .8, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 94%", once: true }, clearProps: "all" });
         });
@@ -33,5 +39,5 @@ export function Motion({ children }: { children: React.ReactNode }) {
     document.fonts.ready.then(refresh);
     return () => { images?.forEach(img => img.removeEventListener("load", refresh)); media.revert(); ctx.revert(); };
   }, [path, paused]);
-  return <div ref={root}><div className="reading-progress" aria-hidden="true"/>{children}<button className="motion-toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Activar animaciones" : "Pausar animaciones"} aria-pressed={paused} title={paused ? "Activar animaciones" : "Pausar animaciones"}>{paused ? <Play size={13}/> : <Pause size={13}/>}<span>Motion {paused ? "off" : "on"}</span></button></div>;
+  return <MotionSettings.Provider value={{ paused }}><div ref={root}><div className="reading-progress" aria-hidden="true"/>{children}<button className="motion-toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Activar animaciones" : "Pausar animaciones"} aria-pressed={paused} title={paused ? "Activar animaciones" : "Pausar animaciones"}>{paused ? <Play size={13}/> : <Pause size={13}/>}<span>Motion {paused ? "off" : "on"}</span></button></div></MotionSettings.Provider>;
 }

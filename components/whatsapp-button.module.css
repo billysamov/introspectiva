@@ -1,0 +1,9 @@
+.button{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:calc(64px + env(safe-area-inset-bottom));z-index:100;display:flex;align-items:center;gap:10px;min-height:56px;padding:10px 15px 10px 12px;border:1px solid #75edaa80;border-radius:30px;background:#21cb70;color:#05351d;box-shadow:0 8px 28px #0005;transition:transform .2s,background .2s,box-shadow .2s;text-decoration:none}
+.button>svg{width:30px;height:30px;flex-shrink:0}
+.button>span:not(.arrow){display:flex;flex-direction:column;gap:3px;font-size:9px;line-height:1.1}
+.button strong{font-size:13px;font-weight:700;letter-spacing:-.2px}
+.arrow{font-size:18px;margin-left:3px}
+.button:hover{transform:translateY(-3px);background:#3bd985;box-shadow:0 12px 30px #0006}
+.button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:600px){.button{right:max(9px,env(safe-area-inset-right));bottom:calc(56px + env(safe-area-inset-bottom));min-height:48px;padding:8px 12px 8px 9px;gap:7px}.button>svg{width:27px;height:27px}.button>span:not(.arrow){font-size:8px}.button strong{font-size:11px}.arrow{display:none}}
+@media(prefers-reduced-motion:reduce){.button{transition:none}.button:hover{transform:none}}

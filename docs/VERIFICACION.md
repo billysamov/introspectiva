@@ -23,3 +23,41 @@
 - Medir Core Web Vitals con la web desplegada y tráfico real. No se atribuyen puntuaciones Lighthouse ni garantías de velocidad/conversión que no se hayan medido.
 
 La entrega incluye 13 páginas públicas más la página 404, los recursos de SEO y una API de contacto. La base de datos propuesta guarda consultas; no hay CMS ni panel administrativo incluido.
+
+## Ampliación de servicios y experiencia de marca
+
+- Compilación final `npm run build`: correcta, incluidas las cuatro rutas de servicios.
+- Catálogo general y detalles de diseño web, tienda online, identidad y sistemas visitados en navegador.
+- Demostraciones GSAP en bucle con imágenes locales. Pausa individual y global comprobadas: el progreso conserva la misma transformación entre dos observaciones mientras está pausado.
+- Proceso de cinco etapas: selección de Diseñar actualiza título, actividades, entregable, revisión y participación del cliente.
+- Precarga vectorial observada al entrar; desaparece y deja la página disponible. Repetición por sesión, límites de espera, Escape y movimiento reducido revisados en código.
+- Transición entre rutas comprobada. Se corrigió la conservación involuntaria de scroll: un enlace desde el final de un servicio llega a la nueva ruta con `scrollY: 0` y cortina oculta.
+- Preferencia de sonido: silenciar, recargar y restaurar sonido comprobados en la interfaz. Síntesis y activación tras clic revisadas en código; no se realizó una evaluación auditiva del tono.
+- Vista móvil de tienda online revisada a 390 y 320 px, sin desbordamiento horizontal. Vista de escritorio y panel del proceso revisados visualmente.
+- No aparecen errores de consola en la captura final. Se evitaron avisos de GSAP al buscar elementos exclusivos de la portada en otras rutas.
+- SVG del símbolo y logo completo disponibles en `public/`; el texto del logo completo está convertido a curvas.
+- Capturas: `preview-services-desktop.png`, `preview-services-process.png`, `preview-services-mobile.png`.
+
+## Referencia externa: Servitotales
+
+Se visitaron la portada, `/epp` y `/contacto` de https://www.servitotales.com/. Es una web B2B multipágina de EPP, suministros y maquinaria, orientada a cotizaciones. No se modificó la web ni se envió ningún formulario.
+
+Hallazgo reproducible en `/contacto` a 390 px: el enlace Cotizar ocupa aproximadamente x=328–408 px y el botón Abrir Menú x=416–458 px. Ambos rebasan el área visible; la página oculta el desbordamiento. Evidencia: `servitotales-mobile-review.png`. El catálogo de EPP muestra cinco familias con imágenes y enlaces de cotización por producto; no se observó buscador ni filtros en esa página. No se midió rendimiento ni se validaron certificaciones o promesas de disponibilidad de la empresa.
+
+## WhatsApp global y ampliación de sonidos
+
+- Compilación optimizada y TypeScript correctos tras agregar `WhatsAppButton` al layout.
+- Enlace global comprobado en el detalle de Diseño web: número oficial +51 922 394 336, saludo genérico y apertura en nueva pestaña. No se abrió ni envió una conversación externa.
+- Botón revisado visualmente a 390 px, con separación del control de sonido: `preview-whatsapp-mobile.png`.
+- Sonido extendido a navegación, apertura del menú, tarjetas/filtros de proyectos, enlaces para explorar servicios y etapas del proceso. Reanudación de AudioContext esperada antes de sintetizar el tono.
+- Silenciar y volver a activar comprobados en navegador; al activar está programada una muestra. La etapa Diseñar cambia correctamente con `data-sound` presente. No se verificó el audio mediante escucha o captura.
+- Sin errores de consola en la revisión de la página actualizada.
+
+## Referencia externa: Florentin
+
+Se visitaron https://proyecto-florentin.vercel.app/ y `/clases`. Es una web multipágina de clases de francés, recursos y artículos, con enlace al portal de alumnos. Su pie declara operación por Introspectiva Studio. No se accedió a cuentas privadas ni se comprobaron pagos o reservas.
+
+- Inicio: aparece el mensaje público `Sin video configurado` en la sección del método.
+- `/clases`: se confirmaron dos tarjetas `Intensivo (Pack 12 Clases)` con igual descripción y precios de 170,00 € y 299,90 €.
+- Se observaron textos mezclados e incompletos como `Preparación aux exámenes` y `carte de motivacion o entreviste profesional`.
+- Fortalezas: oferta educativa específica, presentación del profesor, diagnóstico gratuito y páginas diferenciadas para clases, recursos y contenidos. No se verificaron las cifras de alumnos, testimonios ni credenciales anunciadas.

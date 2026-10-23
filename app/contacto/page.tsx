@@ -4,11 +4,9 @@ import { PageIntro, Eyebrow } from "@/components/ui";
 import { CONTACT_SERVICES } from "@/lib/contact";
 import type { ContactService } from "@/lib/contact";
 import { pageMetadata } from "@/lib/metadata";
+import { whatsappUrl } from "@/lib/contact-channels";
 
 export const metadata = pageMetadata("Hablemos de tu proyecto", "Cuéntanos tu idea. Diseñamos contigo el siguiente paso: una web, una tienda online, un sistema o una nueva experiencia digital.", "/contacto");
-
-// Official contact linked from https://introspectiva.digital/ on 2026-10-23.
-const whatsappUrl = "https://wa.me/51922394336?text=Hola%2C%20quiero%20conversar%20sobre%20un%20proyecto%20digital.";
 
 export default async function Contact({ searchParams }: { searchParams: Promise<{ servicio?: string | string[] }> }) {
   const query = await searchParams;
