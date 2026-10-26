@@ -22,7 +22,7 @@
 - Confirmar alcance comercial, condiciones de soporte, atribución de proyectos y datos del responsable del tratamiento antes de publicar.
 - Medir Core Web Vitals con la web desplegada y tráfico real. No se atribuyen puntuaciones Lighthouse ni garantías de velocidad/conversión que no se hayan medido.
 
-La entrega incluye 13 páginas públicas más la página 404, los recursos de SEO y una API de contacto. La base de datos propuesta guarda consultas; no hay CMS ni panel administrativo incluido.
+La entrega incluye 15 páginas públicas más la página 404, los recursos de SEO y una API de contacto. La base de datos propuesta guarda consultas; no hay CMS ni panel administrativo incluido.
 
 ## Ampliación de servicios y experiencia de marca
 
@@ -61,3 +61,16 @@ Se visitaron https://proyecto-florentin.vercel.app/ y `/clases`. Es una web mult
 - `/clases`: se confirmaron dos tarjetas `Intensivo (Pack 12 Clases)` con igual descripción y precios de 170,00 € y 299,90 €.
 - Se observaron textos mezclados e incompletos como `Preparación aux exámenes` y `carte de motivacion o entreviste profesional`.
 - Fortalezas: oferta educativa específica, presentación del profesor, diagnóstico gratuito y páginas diferenciadas para clases, recursos y contenidos. No se verificaron las cifras de alumnos, testimonios ni credenciales anunciadas.
+
+## Proyectos y fondos de cabecera — 26 de octubre de 2026
+
+- Integrada la versión existente en GitHub antes de continuar, preservando su historial y las capturas de Servitotales y Florentin. Ambos proyectos aparecen primero en el catálogo y en la selección de inicio, con ficha independiente y enlaces a las URLs facilitadas por el usuario.
+- Revisado el contenido para describir la experiencia pública observada, sin atribuir métricas, certificaciones ni funciones privadas no verificadas.
+- Todas las cabeceras incorporan `HeroSection`: degradados, imágenes o capturas propias de cada proyecto y movimiento decorativo GSAP. Privacidad y 404 permanecen estáticas.
+- `npm run build`: correcto, con comprobación TypeScript y generación de las rutas estáticas. Las 15 páginas públicas respondieron HTTP 200 y contienen su variante de cabecera.
+- Portafolio, fichas de Servitotales y Florentin y detalle de diseño web revisados en navegador. Los enlaces externos apuntan a las URLs solicitadas. Navegación interna a la ficha de Servitotales con `scrollY: 0`.
+- Florentin revisado visualmente a 390 px; Florentin y Diseño web comprobados a 320 px, sin desbordamiento horizontal.
+- Pausa global comprobada: las cuatro transformaciones del fondo conservan exactamente los mismos valores entre observaciones. La demostración de servicio también indica pausa; reactivación por teclado comprobada.
+- Movimiento reducido, pausa fuera de pantalla, pestaña oculta y limpieza de efectos revisados en código. Sin errores de consola en las páginas observadas.
+- Capturas: `preview-projects-heroes.png` y `preview-florentin-hero-mobile.png`.
+- La comprobación es local. No verifica un despliegue nuevo en Vercel ni una conexión real con Supabase.

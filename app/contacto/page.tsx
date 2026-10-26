@@ -14,7 +14,7 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
   const initialService = CONTACT_SERVICES.includes(requested as ContactService) ? requested as ContactService : "";
 
   return <>
-    <PageIntro eyebrow="EMPECEMOS UNA CONVERSACIÓN" title="Tu próxima gran idea" accent="empieza aquí." description="No necesitas tenerlo todo resuelto. Cuéntanos dónde estás y a dónde quieres llegar; encontramos juntos el siguiente paso."/>
+    <PageIntro variant="contact" eyebrow="EMPECEMOS UNA CONVERSACIÓN" title="Tu próxima gran idea" accent="empieza aquí." description="No necesitas tenerlo todo resuelto. Cuéntanos dónde estás y a dónde quieres llegar; encontramos juntos el siguiente paso."/>
     <section className="contact-layout wrap section">
       <aside className="contact-details" data-reveal>
         <Eyebrow>DE TU IDEA A LO POSIBLE</Eyebrow>

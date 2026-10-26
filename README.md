@@ -23,7 +23,7 @@ npm start
 
 - Inicio, presentación del estudio y acceso a contenidos.
 - Servicios, cuatro páginas de detalle con alcance, cinco etapas de trabajo interactivas, entregables, referencias visuales y preguntas frecuentes.
-- Proyectos, filtros y tres fichas individuales.
+- Proyectos, filtros y cinco fichas individuales, con Servitotales y Florentin destacados y enlaces a sus webs.
 - El estudio, filosofía y método de trabajo.
 - Contacto, formulario validado y WhatsApp oficial.
 - Privacidad, sitemap, robots y página 404.
@@ -33,6 +33,8 @@ El contenido se edita en `lib/content.ts`. Los componentes visuales están en `c
 GSAP controla entradas de página, revelado de títulos y secciones, marquesina y progreso de lectura. Cada servicio incluye una demostración en bucle: diseño web responsive, compra online, flujo de tareas e identidad visual. Incluye pausa manual, pausa fuera de pantalla, limpieza al cambiar de ruta y respeto a `prefers-reduced-motion`. Las fuentes se alojan localmente mediante Fontsource. Las imágenes usan la optimización de Next.js.
 
 La experiencia de marca añade una precarga por sesión, transiciones entre páginas con el símbolo vectorial y sonidos breves en los botones principales. El visitante puede silenciar el sonido y su preferencia se conserva. Los SVG descargables están en `public/logo-symbol.svg` y `public/logo-lockup.svg`. El contenido adicional de servicios se edita en `lib/service-presentation.ts` y `lib/service-workflows.ts`.
+
+Todas las cabeceras incorporan fondos acordes con su contenido: imágenes locales, capturas del proyecto, degradados y órbitas animadas con GSAP. `HeroSection` y `HeroBackdrop` comparten la composición y permiten variar imagen y tono por ruta. El movimiento se pausa al salir de pantalla, ocultar la pestaña o activar la pausa global; respeta también el movimiento reducido del sistema. Privacidad y 404 usan un fondo estático.
 
 ## Supabase y Vercel
 

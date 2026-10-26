@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/content";
 import { Eyebrow, ContactCta } from "@/components/ui";
 import { pageMetadata } from "@/lib/metadata";
+import { HeroSection } from "@/components/hero-section";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -27,7 +28,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
   return (
     <>
-      <section className="wrap project-detail-intro page-enter">
+      <HeroSection variant="case" image={p.image} tone={slug === "servitotales" ? "rose" : slug === "florentin" ? "teal" : slug === "d-gali-home" ? "amber" : "blue"}>
+      <div className="wrap project-detail-intro page-enter">
         <Link className="back-link" href="/proyectos">
           <ArrowLeft size={16} /> Todos los proyectos
         </Link>
@@ -45,7 +47,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </a>
           </div>
         )}
-      </section>
+      </div>
+      </HeroSection>
 
       <div className={`wrap case-cover project-${p.color}`}>
         <div className="case-image">

@@ -9,7 +9,7 @@ const whatsappUrl = "https://wa.me/51922394336";
 
 export default function Privacy() {
   return <>
-    <PageIntro eyebrow="TU INFORMACIÓN, CON CLARIDAD" title="Una conversación" accent="con confianza." description="Aquí explicamos qué información solicita este sitio y cómo se utiliza cuando nos cuentas tu proyecto."/>
+    <PageIntro variant="legal" eyebrow="TU INFORMACIÓN, CON CLARIDAD" title="Una conversación" accent="con confianza." description="Aquí explicamos qué información solicita este sitio y cómo se utiliza cuando nos cuentas tu proyecto."/>
     <section className="wrap privacy-layout section">
       <aside className="privacy-aside"><Eyebrow>AVISO DE PRIVACIDAD</Eyebrow><p>Versión del formulario: contact-v1<br/>Actualizado: 23 de octubre de 2026</p><Link href="/contacto" className="text-link">Volver al contacto <ArrowUpRight size={17}/></Link></aside>
       <div className="privacy-copy">

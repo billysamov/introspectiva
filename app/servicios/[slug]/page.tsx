@@ -8,6 +8,8 @@ import { Button, Eyebrow, Faq, ContactCta, TextLink } from "@/components/ui";
 import { ServiceDemo } from "@/components/service-demo";
 import { ServiceProcess } from "@/components/service-process";
 import { pageMetadata } from "@/lib/metadata";
+import { HeroSection } from "@/components/hero-section";
+import type { HeroVariant } from "@/components/hero-backdrop";
 import styles from "../services.module.css";
 
 export function generateStaticParams() {
@@ -24,8 +26,9 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const service = services.find(s => s.slug === slug);
   if (!service) notFound();
   const presentation = servicePresentation[slug];
+  const heroVariants: Record<string, HeroVariant> = { "diseno-web": "web", ecommerce: "shop", "sistemas-a-medida": "systems", "identidad-digital": "identity" };
   return <>
-    <section className={`wrap ${styles.detailHero}`}>
+    <HeroSection variant={heroVariants[slug]}><div className={`wrap ${styles.detailHero}`}>
       <Link className="back-link" href="/servicios"><ArrowLeft size={16}/> Todos los servicios</Link>
       <div className={styles.heroGrid}>
         <div className="page-enter">
@@ -40,7 +43,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <div className={styles.heroDemo}><ServiceDemo key={slug} slug={slug}/></div>
       </div>
       <div className={styles.heroFoot}><span>{service.short}</span><span>ESTRATEGIA → DISEÑO → DESARROLLO</span></div>
-    </section>
+    </div></HeroSection>
     <section className={`wrap section ${styles.capabilities}`}>
       <div className={styles.capabilityIntro} data-reveal><Eyebrow number="01">LO QUE CAMBIA PARA TU NEGOCIO</Eyebrow><h2>{presentation.focus}</h2></div>
       <div className={styles.capabilityGrid}>{presentation.capabilities.map((item, i) => <article key={item.title} data-reveal><span>0{i + 1}<ArrowUpRight size={18}/></span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>

@@ -11,7 +11,7 @@ import styles from "./services.module.css";
 export const metadata = pageMetadata("Servicios de diseño y desarrollo digital", "Diseño web, tiendas online, sistemas a medida e identidad digital. Explora demostraciones y conoce cómo trabajamos.", "/servicios");
 export default function Services() {
   return <>
-    <PageIntro eyebrow="NUESTRAS CAPACIDADES" title="Ideas con dirección." accent="Trabajo que se ve." description="Explora lo que podemos construir, mira cómo funciona y conoce el proceso que hay detrás. Diseño, desarrollo y estrategia, conectados con tu negocio."/>
+    <PageIntro variant="services" eyebrow="NUESTRAS CAPACIDADES" title="Ideas con dirección." accent="Trabajo que se ve." description="Explora lo que podemos construir, mira cómo funciona y conoce el proceso que hay detrás. Diseño, desarrollo y estrategia, conectados con tu negocio."/>
     <div className={`wrap ${styles.serviceDirectory}`}><span>ENCUENTRA TU SIGUIENTE PASO</span><nav aria-label="Explorar servicios">{services.map(s=><a key={s.slug} href={`#${s.slug}`}><span>{s.number}</span>{s.name}<ArrowDown size={13}/></a>)}</nav></div>
     <section className={`wrap ${styles.serviceShowcases}`} aria-label="Nuestros servicios">
       {services.map(service=><article key={service.slug} id={service.slug} className={styles.showcase}>

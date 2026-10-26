@@ -14,12 +14,23 @@ export function Motion({ children }: { children: React.ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
   const path = usePathname();
   const [paused, setPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-motion", paused ? "paused" : "active");
-    if (paused) {
-      ScrollTrigger.getAll().forEach((t) => t.disable());
-      return;
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setReducedMotion(preference.matches);
+    updatePreference();
+    preference.addEventListener("change", updatePreference);
+    return () => preference.removeEventListener("change", updatePreference);
+  }, []);
+
+  useEffect(() => {
+    // Check the media query immediately so the first effect cannot animate
+    // before React has received the user's system preference.
+    const stopped = paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.documentElement.setAttribute("data-motion", stopped ? "paused" : "active");
+    if (stopped) {
+      return () => document.documentElement.removeAttribute("data-motion");
     }
 
     const ctx = gsap.context(() => {
@@ -104,7 +115,8 @@ export function Motion({ children }: { children: React.ReactNode }) {
     const heroCopyEl = root.current?.querySelector<HTMLElement>(".hero-copy");
 
     let onMouseMove: ((e: MouseEvent) => void) | undefined;
-    if (heroArtEl && window.matchMedia("(hover: hover)").matches) {
+    ctx.add(() => {
+      if (!heroArtEl || !window.matchMedia("(hover: hover)").matches) return;
       const xArt = gsap.quickTo(heroArtEl, "x", { duration: 0.6, ease: "power2.out" });
       const yArt = gsap.quickTo(heroArtEl, "y", { duration: 0.6, ease: "power2.out" });
       const xCopy = heroCopyEl ? gsap.quickTo(heroCopyEl, "x", { duration: 0.8, ease: "power2.out" }) : null;
@@ -121,10 +133,16 @@ export function Motion({ children }: { children: React.ReactNode }) {
         }
       };
       window.addEventListener("mousemove", onMouseMove);
-    }
+    });
 
+    let disposed = false;
+    let refreshFrame = 0;
     const refresh = () => {
-      requestAnimationFrame(() => ScrollTrigger.refresh());
+      if (disposed) return;
+      cancelAnimationFrame(refreshFrame);
+      refreshFrame = requestAnimationFrame(() => {
+        if (!disposed) ScrollTrigger.refresh();
+      });
     };
 
     const images = root.current?.querySelectorAll("img");
@@ -133,11 +151,19 @@ export function Motion({ children }: { children: React.ReactNode }) {
     refresh();
 
     return () => {
+      disposed = true;
+      cancelAnimationFrame(refreshFrame);
       if (onMouseMove) window.removeEventListener("mousemove", onMouseMove);
       images?.forEach((img) => img.removeEventListener("load", refresh));
       ctx.revert();
+      document.documentElement.removeAttribute("data-motion");
     };
-  }, [path, paused]);
+  }, [path, paused, reducedMotion]);
+
+  const stopped = paused || reducedMotion;
+  const motionLabel = reducedMotion
+    ? "Movimiento reducido por la configuración del sistema"
+    : paused ? "Activar animaciones" : "Pausar animaciones";
 
   return (
     <MotionSettings.Provider value={{ paused }}>
@@ -146,13 +172,14 @@ export function Motion({ children }: { children: React.ReactNode }) {
         {children}
         <button
           className="motion-toggle"
-          onClick={() => setPaused(!paused)}
-          aria-label={paused ? "Activar animaciones" : "Pausar animaciones"}
-          aria-pressed={paused}
-          title={paused ? "Activar animaciones" : "Pausar animaciones"}
+          onClick={() => setPaused((value) => !value)}
+          aria-label={motionLabel}
+          aria-pressed={stopped}
+          disabled={reducedMotion}
+          title={motionLabel}
         >
-          {paused ? <Play size={13} /> : <Pause size={13} />}
-          <span>Motion {paused ? "off" : "on"}</span>
+          {stopped ? <Play size={13} /> : <Pause size={13} />}
+          <span>Motion {stopped ? "off" : "on"}</span>
         </button>
       </div>
     </MotionSettings.Provider>

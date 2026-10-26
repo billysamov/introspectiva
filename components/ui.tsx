@@ -2,13 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight, Plus } from "lucide-react";
 import { projects } from "@/lib/content";
+import { HeroSection } from "./hero-section";
+import type { HeroVariant } from "./hero-backdrop";
 
 export function Button({ href, children, light = false, secondary = false }: { href: string; children: React.ReactNode; light?: boolean; secondary?: boolean }) {
   return <Link className={`button ${light ? "button-light" : ""} ${secondary ? "button-secondary" : ""}`} href={href}>{children}<ArrowUpRight size={20}/></Link>;
 }
 export function Eyebrow({ children, number }: { children: React.ReactNode; number?: string }) { return <div className="eyebrow">{number && <span className="eyebrow-number">/{number}</span>}<span>{children}</span></div>; }
-export function PageIntro({ eyebrow, title, accent, description }: { eyebrow: string; title: string; accent?: string; description: string }) {
-  return <section className="page-intro page-enter wrap"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}{accent && <><br/><span className="text-blue">{accent}</span></>}</h1><p>{description}</p></section>;
+export function PageIntro({ eyebrow, title, accent, description, variant = "work" }: { eyebrow: string; title: string; accent?: string; description: string; variant?: HeroVariant }) {
+  return <HeroSection variant={variant} quiet={variant === "legal"}><div className="page-intro page-enter wrap"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}{accent && <><br/><span className="text-blue">{accent}</span></>}</h1><p>{description}</p></div></HeroSection>;
 }
 export function ProjectCard({ project, index = 0 }: { project: typeof projects[number]; index?: number }) {
   const displayHost = "externalUrl" in project && project.externalUrl

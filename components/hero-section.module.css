@@ -1,0 +1,12 @@
+.section{position:relative;isolation:isolate;overflow:clip}
+.section :global(.page-intro){position:relative;min-height:490px;padding-top:105px;padding-bottom:85px}
+.section :global(.page-intro h1){max-width:1000px;font-size:clamp(52px,6.5vw,96px)}
+.section :global(.page-intro>p){color:#b7c3d4;max-width:590px;line-height:1.85}
+.section :global(.project-detail-intro){position:relative;min-height:530px;padding-bottom:75px}
+.section :global(.project-detail-intro h1){font-size:clamp(48px,7vw,100px);max-width:1100px}
+.section :global(.project-detail-intro>p){color:#bdc8d8}
+.section :global(.hero-meta),.section :global(.hero-bottom){position:relative}
+.section:has(+ :global(.portfolio-section)){margin-bottom:38px}
+.section:has(+ :global(.studio-manifesto)){margin-bottom:45px}
+@media(max-width:800px){.section :global(.page-intro){min-height:440px;padding-top:75px;padding-bottom:65px}.section :global(.page-intro h1){font-size:clamp(45px,7.8vw,68px)}.section :global(.project-detail-intro){min-height:0;padding-bottom:60px}}
+@media(max-width:600px){.section :global(.page-intro){min-height:0;padding-top:60px;padding-bottom:65px}.section :global(.page-intro h1){font-size:clamp(39px,10.5vw,60px);line-height:1.1;letter-spacing:-.06em}.section :global(.page-intro>p){font-size:13px;line-height:1.8}.section :global(.project-detail-intro h1){font-size:clamp(37px,10.2vw,60px);gap:12px}.section :global(.project-detail-intro h1>span){font-size:30px}.section :global(.project-detail-intro>p){font-size:14px}.section:has(+ :global(.portfolio-section)){margin-bottom:22px}.section:has(+ :global(.studio-manifesto)){margin-bottom:25px}}
