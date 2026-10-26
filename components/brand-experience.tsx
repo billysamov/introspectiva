@@ -95,7 +95,7 @@ export function BrandExperience() {
   revealRef.current = () => {
     if (!curtainRef.current) return;
     timelineRef.current?.kill();
-    if (pausedRef.current || window.matchMedia(REDUCED_MOTION).matches) {
+    if (pausedRef.current) {
       releaseRef.current();
       return;
     }
@@ -106,8 +106,8 @@ export function BrandExperience() {
   useLayoutEffect(() => {
     const curtain = curtainRef.current;
     const mark = markRef.current;
-    if (!curtain || !mark || sessionIntroSeen()) return;
-    if (pausedRef.current || window.matchMedia(REDUCED_MOTION).matches) {
+    if (!curtain || !mark) return;
+    if (pausedRef.current) {
       rememberIntro();
       return;
     }
@@ -166,41 +166,63 @@ export function BrandExperience() {
     } catch { /* Use the in-memory preference when storage is unavailable. */ }
 
     const playTone = async () => {
-      if (!soundRef.current || performance.now() - lastToneRef.current < 160) return;
+      if (!soundRef.current || performance.now() - lastToneRef.current < 120) return;
       lastToneRef.current = performance.now();
       try {
-        const context = audioRef.current ?? new AudioContext();
+        const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+        if (!AudioCtx) return;
+        const context = audioRef.current ?? new AudioCtx();
         audioRef.current = context;
-        // Both creation and resume happen inside a trusted click, never on page load.
         if (context.state === "suspended") await context.resume();
         if (context.state !== "running" || !soundRef.current) return;
+
         const at = context.currentTime;
-        const oscillator = context.createOscillator();
+        const osc1 = context.createOscillator();
+        const osc2 = context.createOscillator();
         const gain = context.createGain();
-        oscillator.type = "sine";
-        oscillator.frequency.setValueAtTime(620, at);
-        oscillator.frequency.exponentialRampToValueAtTime(880, at + .07);
-        gain.gain.setValueAtTime(.0001, at);
-        gain.gain.exponentialRampToValueAtTime(.045, at + .008);
-        gain.gain.exponentialRampToValueAtTime(.0001, at + .13);
-        oscillator.connect(gain);
+
+        // Warm studio haptic sound: fundamental + gentle harmonic
+        osc1.type = "sine";
+        osc1.frequency.setValueAtTime(540, at);
+        osc1.frequency.exponentialRampToValueAtTime(780, at + 0.08);
+
+        osc2.type = "triangle";
+        osc2.frequency.setValueAtTime(1080, at);
+        osc2.frequency.exponentialRampToValueAtTime(1560, at + 0.08);
+
+        gain.gain.setValueAtTime(0.0001, at);
+        gain.gain.exponentialRampToValueAtTime(0.28, at + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.16);
+
+        osc1.connect(gain);
+        osc2.connect(gain);
         gain.connect(context.destination);
-        oscillator.start(at);
-        oscillator.stop(at + .14);
-        oscillator.onended = () => { oscillator.disconnect(); gain.disconnect(); };
-      } catch { /* Audio support must never prevent a button action. */ }
+
+        osc1.start(at);
+        osc2.start(at);
+        osc1.stop(at + 0.17);
+        osc2.stop(at + 0.17);
+
+        osc1.onended = () => {
+          try {
+            osc1.disconnect();
+            osc2.disconnect();
+            gain.disconnect();
+          } catch {}
+        };
+      } catch { /* Audio support must never prevent interaction */ }
     };
     playToneRef.current = () => { void playTone(); };
 
     const onClick = (event: MouseEvent) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
-      const importantButton = target.closest<HTMLElement>(".button:not(.button-secondary), .header-cta, .round-cta, .desktop-nav a, .mobile-menu nav a, .menu-toggle, .project-card, .text-link, .service-row, .project-filters button, [data-sound]");
+      const importantButton = target.closest<HTMLElement>("button, a, .button, .header-cta, .round-cta, .desktop-nav a, .mobile-menu nav a, .menu-toggle, .project-card, .text-link, .service-row, .project-filters button, [data-sound]");
       if (event.isTrusted && importantButton && !importantButton.matches('[disabled], [aria-disabled="true"], [data-sound="off"]')) void playTone();
 
       // Keyboard, modified clicks, downloads and external links retain native behavior.
       if (event.defaultPrevented || event.button !== 0 || event.detail === 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      if (pausedRef.current || window.matchMedia(REDUCED_MOTION).matches || introRef.current) return;
+      if (pausedRef.current || introRef.current) return;
       const anchor = target.closest<HTMLAnchorElement>("a[href]");
       if (!anchor || anchor.hasAttribute("download") || (anchor.target && anchor.target !== "_self") || anchor.dataset.transition === "off" || anchor.getAttribute("aria-disabled") === "true") return;
       const url = new URL(anchor.href, window.location.href);
