@@ -1,0 +1,11 @@
+La jerarquía visual es una forma de expresar prioridades de contenido.
+
+Este carrusel usa una demostración conceptual: la misma información aparece primero con elementos de peso similar y después organizada en título, explicación, servicios y siguiente paso.
+
+El ejercicio permite conversar sobre decisiones concretas: qué mensaje debe destacar, qué información lo explica, qué puede agruparse y dónde conviene mostrar una acción. Tamaño, contraste, espacio y alineación sirven para hacer visible ese orden.
+
+Una propuesta visual debe revisarse después con contenido real, en distintos tamaños de pantalla y con los recorridos que necesita su público.
+
+Compartimos el ejemplo para mostrar cómo razonamos una interfaz y cómo hacemos esas decisiones discutibles. ¿Qué mensaje aparece primero hoy cuando alguien llega a la web de tu empresa?
+
+#UXUI #JerarquiaVisual #DiseñoWeb #IntrospectivaStudio

@@ -1,0 +1,5 @@
+Frame 1: «¿Tu venta necesita una cotización?» con opciones informales «Sí / Depende del producto».
+
+Frame 2: diagrama «Catálogo → consulta → propuesta».
+
+Frame 3: compartir el post y añadir «La operación define el recorrido».

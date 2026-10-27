@@ -1,0 +1,11 @@
+Una colaboración se vuelve más comprensible cuando cada etapa tiene un entregable y una revisión definidos.
+
+En el proceso de diseño web de Introspectiva trabajamos cinco momentos: descubrir, estructurar, diseñar, construir y lanzar. Cada uno resuelve una pregunta diferente, desde qué debe hacer el sitio hasta cómo se entrega para su uso.
+
+El brief fija objetivos y alcance. El mapa web organiza la información. El prototipo permite revisar navegación e interfaz. La versión funcional abre la revisión del comportamiento real. La entrega reúne la publicación y la documentación acordada.
+
+El cliente participa aportando contenido y validando decisiones en los puntos previstos. Las fechas, responsabilidades y revisiones concretas se especifican en la propuesta.
+
+Este carrusel muestra ese recorrido de trabajo. Puede servir como referencia para una conversación inicial: además de preguntar qué incluye una web, conviene preguntar qué se revisará y qué se recibirá en cada fase.
+
+#ProcesoDeDiseño #DesarrolloWeb #UXUI #IntrospectivaStudio

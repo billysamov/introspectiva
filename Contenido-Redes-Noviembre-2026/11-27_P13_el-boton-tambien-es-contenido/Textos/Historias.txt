@@ -1,0 +1,5 @@
+Frame 1: componente con «Ver proyecto». Pregunta «¿Qué esperas encontrar al pulsar?»
+
+Frame 2: «Texto, destino y comportamiento deben contar la misma historia».
+
+Frame 3: compartir el post.

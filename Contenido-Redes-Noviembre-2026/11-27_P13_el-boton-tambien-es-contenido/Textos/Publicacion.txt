@@ -1,0 +1,11 @@
+El botón también es contenido.
+
+Fecha: 2026-11-27 (Viernes)
+Formato: Post estático
+Instagram: 19:00 / LinkedIn: 09:00 (hora de Lima; horarios de prueba).
+
+Objetivo: Mostrar atención al contenido de interfaz con un ejemplo concreto.
+Acción: Revisa si los botones de tu web explican qué ocurrirá después.
+
+Imagen 01: El botón también es contenido.
+«Ver proyecto» anticipa el siguiente paso. Texto, destino y comportamiento deben ser coherentes. Ejemplo conceptual.

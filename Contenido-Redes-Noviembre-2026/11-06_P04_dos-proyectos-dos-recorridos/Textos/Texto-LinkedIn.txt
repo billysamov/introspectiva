@@ -1,0 +1,11 @@
+El contexto de un negocio cambia la forma de presentar su información.
+
+En Servitotales, el recorrido público se articula alrededor de una oferta industrial: líneas de negocio, catálogo y contacto comercial. En Florentin, la experiencia reúne al profesor, sus clases de francés y recursos para el aprendizaje.
+
+Ambos proyectos necesitan jerarquía, navegación y una identidad coherente. Sin embargo, las prioridades de contenido son diferentes. Una persona que busca un suministro técnico no llega con las mismas preguntas que quien evalúa una propuesta educativa.
+
+Este video reúne composiciones editoriales para los dos proyectos para mostrar esa diferencia de enfoque. La selección permite observar cómo cada propuesta encuentra su propio lenguaje visual.
+
+La comparación también plantea una pregunta útil para cualquier web: ¿su estructura responde a las preguntas de su público? Puedes recorrer los proyectos en https://www.servitotales.com/ y https://proyecto-florentin.vercel.app/.
+
+#Portafolio #DiseñoWeb #UXUI #IntrospectivaStudio

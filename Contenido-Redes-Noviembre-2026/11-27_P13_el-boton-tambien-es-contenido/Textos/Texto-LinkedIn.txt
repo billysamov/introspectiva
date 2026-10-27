@@ -1,0 +1,11 @@
+El contenido de una interfaz también vive en sus acciones.
+
+Un botón con un nombre concreto puede anticipar si abre un proyecto, lleva a un servicio o inicia una consulta. El texto debe tener relación con el contexto de la página y con lo que realmente ocurre después de pulsarlo.
+
+En esta pieza usamos una ficha de portafolio conceptual y la acción «Ver proyecto». El ejemplo permite revisar varias decisiones juntas: jerarquía, nombre del enlace, destino y estado de foco para quien navega con teclado.
+
+La etiqueta por sí sola no resuelve toda la experiencia. Debe acompañarse de un comportamiento coherente, y conviene probarla dentro del recorrido completo en lugar de evaluarla aislada.
+
+Compartimos este detalle porque expresa cómo se conectan contenido, diseño y desarrollo en el trabajo del estudio. Una revisión sencilla para tu próxima reunión: recorrer los botones principales y comprobar si cada uno explica su siguiente paso.
+
+#UXWriting #DiseñoDeInterfaces #UXUI #IntrospectivaStudio

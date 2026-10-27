@@ -1,0 +1,5 @@
+Frame 1: «¿Qué deberías poder revisar antes de lanzar?»
+
+Frame 2: mostrar «Mapa web → prototipo → versión funcional».
+
+Frame 3: compartir el carrusel con CTA «Consulta los entregables de cada etapa».

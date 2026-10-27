@@ -1,0 +1,11 @@
+¿Qué debería mirar primero una persona en esta pantalla?
+
+Para explicarlo preparamos un ejemplo conceptual: una misma oferta presentada con todos los elementos al mismo nivel y luego organizada por jerarquía.
+
+En la segunda composición diferenciamos título, descripción, servicios y siguiente paso. El espacio, el tamaño y el contraste ayudan a expresar ese orden.
+
+Así hacemos visibles las decisiones de interfaz para poder revisarlas. Después hay que contrastarlas con el contenido real y las personas que usarán el sitio.
+
+Desliza y observa qué elemento encuentras primero en cada versión.
+
+#UXUI #JerarquiaVisual #DiseñoWeb #IntrospectivaStudio

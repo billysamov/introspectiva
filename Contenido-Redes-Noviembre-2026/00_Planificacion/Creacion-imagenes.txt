@@ -1,0 +1,80 @@
+IMÁGENES ORIGINALES / INTROSPECTIVA STUDIO
+
+Herramienta: generación integrada image_gen. Imágenes nuevas, sin referencias ni capturas del sitio.
+
+Dirección del prompt común: pieza editorial vertical 4:5, tipografía sans serif grande y legible en español, márgenes amplios, negro carbón, azul cobalto y blanco marfil, ilustración 3D original relacionada con el tema; nombre INTROSPECTIVA STUDIO, titular y texto exactos de cada lámina, pie introspectiva.digital. Sin marcas de agua, interfaces de clientes inventadas ni cifras de resultados.
+
+P01 / Mirar dentro. Crear hacia adelante.
+1. Mirar dentro. Crear hacia adelante. / Estrategia, diseño y desarrollo para experiencias digitales con intención.
+
+P02 / Servitotales: ordenar una oferta B2B
+1. Una oferta industrial, bien organizada. / Servitotales · Web corporativa y catálogo B2B.
+2. Empezar por lo que se busca. / EPP, ferretería, suministros y maquinaria: líneas de negocio que orientan la exploración.
+3. Dar contexto al producto. / Las imágenes del catálogo acompañan la información de cada familia de soluciones.
+4. Conectar con una consulta. / Los accesos contextuales a WhatsApp permiten continuar la conversación con el equipo comercial.
+5. Un alcance que puedes recorrer. / Web corporativa · Catálogo B2B · Diseño UX/UI · Cotización por WhatsApp.
+6. Explora Servitotales. / Conoce la experiencia publicada en servitotales.com. Proyecto del portafolio de Introspectiva Studio.
+
+P03 / Un catálogo puede empezar sin carrito.
+1. Un catálogo puede empezar sin carrito. / Producto → consulta → equipo comercial. El recorrido depende de cómo funciona tu venta.
+
+P04 / Dos proyectos. Dos recorridos.
+1. Dos proyectos. Dos recorridos. / Una estructura que parte de lo que necesita cada público.
+
+P05 / Florentin: enseñar desde la web.
+1. Un espacio para acercarse al francés. / Florentin · Diseño web para una propuesta educativa.
+2. Conocer a quien enseña. / La presentación del profesor da contexto a su propuesta y a su marca personal.
+3. Explorar las clases. / Una página propia permite conocer la oferta sin concentrar toda la información en la portada.
+4. Seguir aprendiendo. / Recursos y artículos forman parte del recorrido público del sitio.
+5. Una experiencia con estructura. / Presentación personal · Clases · Recursos · Artículos · Acceso para alumnos.
+6. Conoce el proyecto Florentin. / Explora la experiencia publicada en proyecto-florentin.vercel.app.
+
+P06 / Lo que recibes en cada etapa.
+1. Lo que recibes en cada etapa. / Nuestro proceso de diseño web: cinco etapas y decisiones compartidas.
+2. 01 · Descubrir. / Entendemos objetivos, audiencia y prioridades. Entregable: brief y alcance del sitio.
+3. 02 · Estructurar. / Organizamos páginas, mensajes y recorridos. Entregable: mapa web y estructura de contenido.
+4. 03 · Diseñar. / Revisamos identidad, pantallas y navegación. Entregable: prototipo navegable de la web.
+5. 04 · Construir. / Desarrollamos las páginas y conexiones acordadas. Entregable: web funcional en entorno de revisión.
+6. 05 · Lanzar. / Coordinamos la publicación y la entrega. Entregable: sitio publicado y documentación acordada.
+
+P07 / Una identidad que toma movimiento.
+1. Miramos dentro. / Una idea clara es el punto de partida.
+
+P08 / Tres preguntas antes de diseñar.
+1. Tres preguntas antes de diseñar. / 01 ¿Qué ofreces?  02 ¿A quién te diriges?  03 ¿Qué necesita hacer esa persona en tu web?
+
+P09 / Dar jerarquía a una misma información.
+1. Mismo contenido. Otro orden. / Ejemplo conceptual de jerarquía visual: una misma oferta, organizada de dos maneras.
+2. Cuando todo pesa lo mismo. / Título, párrafos, servicios y botones compiten por la atención en esta composición ficticia.
+3. Definir un primer mensaje. / La propuesta principal ocupa el nivel más visible. La explicación aparece después.
+4. Agrupar lo que está relacionado. / Los servicios se presentan juntos, con títulos y espacios consistentes.
+5. Explicar el siguiente paso. / Una acción concreta permite entender qué se puede hacer después de leer.
+6. Diseñar también es ordenar. / Revisa mensaje, agrupación y acción. Después contrasta la propuesta con contenido y personas reales.
+
+P10 / De la pregunta a la entrega.
+1. Todo empieza con una pregunta. / Descubrir: objetivos y alcance. Estructurar: mapa web y contenido.
+
+P11 / SIIS: información técnica en contexto.
+1. La información técnica, más cerca. / SIIS Ingeniería · Proyecto del portafolio de Introspectiva.
+2. Un contexto empresarial. / Equipos y soluciones de fibra óptica para empresas y profesionales.
+3. Organizar la oferta. / El catálogo corporativo reúne información para explorar los productos en su contexto.
+4. Continuar la conversación. / Los puntos de contacto acompañan la presentación de la oferta técnica.
+5. El alcance del proyecto. / Catálogo B2B · Diseño de interfaz · Presencia corporativa.
+6. Conoce la ficha de SIIS. / Explora este proyecto en el portafolio de Introspectiva Studio.
+
+P12 / Antes de pedir una propuesta web.
+1. Antes de pedir una propuesta web. / Cuatro dudas que conviene conversar desde el inicio.
+2. ¿Landing o varias páginas? / La estructura depende del objetivo. Una campaña y una oferta con varios servicios pueden necesitar recorridos distintos.
+3. ¿Podré actualizar contenido? / Si necesitas editar con frecuencia, definimos un gestor de contenido y sus funciones dentro del alcance.
+4. ¿Qué define la inversión? / Páginas, funciones, contenido e integraciones. La propuesta también distingue los costos recurrentes que correspondan.
+5. ¿Qué pasa después de publicar? / Acordamos accesos, documentación y responsabilidades. Si necesitas soporte, definimos sus condiciones.
+
+P13 / El botón también es contenido.
+1. El botón también es contenido. / «Ver proyecto» anticipa el siguiente paso. Texto, destino y comportamiento deben ser coherentes. Ejemplo conceptual.
+
+P14 / Lo que hay detrás de una pantalla.
+1. Lo que hay detrás de una pantalla. / Una selección de proyectos y decisiones de Introspectiva Studio.
+2. Cada proyecto tiene su contexto. / Industria, educación y tecnología: la estructura parte de las preguntas de cada público.
+3. Las decisiones se pueden explicar. / Jerarquía, contenido y acciones conectan lo que el negocio ofrece con lo que una persona necesita encontrar.
+4. El proceso también se comparte. / Brief, estructura, prototipo, versión funcional y entrega. Cada etapa tiene algo concreto que revisar.
+5. Conversemos sobre tu siguiente paso. / Explora el portafolio y cuéntanos qué necesitas resolver. introspectiva.digital

@@ -1,0 +1,5 @@
+Frame 1: «¿Qué debería entender alguien al entrar a tu web?» sobre fondo azul.
+
+Frame 2: «Este mes: proyectos, proceso y decisiones de diseño». Mostrar tres etiquetas.
+
+Frame 3: miniatura del portafolio con enlace al sitio del estudio.

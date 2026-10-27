@@ -1,0 +1,11 @@
+La identidad digital incluye decisiones sobre cómo aparece, cambia y responde una interfaz.
+
+En Introspectiva partimos del símbolo de la marca y de un lenguaje visual de azul, contraste y dirección. A partir de esos elementos diseñamos entradas, transiciones y recursos de movimiento que mantienen una relación con la composición estática.
+
+Este video presenta una exploración de esa identidad. El texto permanece visible el tiempo necesario para comprender el mensaje y la pieza funciona sin audio. En la experiencia web también contemplamos controles de pausa y preferencias de movimiento reducido.
+
+Para nosotros, trabajar motion implica definir qué se mueve, con qué intención y qué ocurre cuando la persona prefiere una experiencia más tranquila. Esas decisiones forman parte de la interfaz, junto con el color y la tipografía.
+
+Puedes conocer el lenguaje visual del estudio y sus aplicaciones en nuestro portafolio: https://introspectiva.digital/.
+
+#MotionGraphics #IdentidadDigital #DiseñoDeMarca #IntrospectivaStudio

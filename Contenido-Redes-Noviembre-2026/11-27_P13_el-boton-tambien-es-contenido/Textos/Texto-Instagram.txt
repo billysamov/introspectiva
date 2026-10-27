@@ -1,0 +1,11 @@
+Un botón es una pequeña pieza de contenido.
+
+Su texto puede explicar si vas a conocer un servicio, explorar un proyecto o iniciar una conversación. Esa diferencia ayuda a que la acción tenga contexto dentro de la página.
+
+En este ejemplo conceptual mostramos «Ver proyecto» junto a una ficha de portafolio. El nombre acompaña lo que la persona está leyendo y anticipa el siguiente paso. Después revisamos que el enlace, el foco de teclado y la respuesta de la interfaz correspondan a esa acción.
+
+Son detalles que forman parte del diseño y del desarrollo.
+
+Mira los botones de tu web: ¿puedes saber qué encontrarás antes de pulsarlos?
+
+#UXWriting #DiseñoDeInterfaces #UXUI #IntrospectivaStudio

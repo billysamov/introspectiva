@@ -1,0 +1,11 @@
+La arquitectura de una web educativa debe ordenar preguntas distintas: quién enseña, qué ofrece y dónde puede encontrarse contenido para seguir aprendiendo.
+
+Florentin presenta una propuesta de clases de francés, recursos y artículos. El proyecto combina la marca personal del profesor con una estructura de páginas independientes y un acceso dedicado a alumnos.
+
+La presentación personal aporta contexto. Las páginas de clases permiten explorar la oferta. Los recursos y artículos amplían el contenido disponible para quien todavía está conociendo la propuesta.
+
+En este carrusel compartimos el recorrido público del proyecto. Las composiciones originales muestran cómo la estructura y la presentación conectan la marca personal con su oferta educativa.
+
+El caso ilustra una pregunta que trabajamos al organizar contenido: ¿qué necesita saber una persona en cada momento de su visita? Puedes conocer la experiencia en https://proyecto-florentin.vercel.app/.
+
+#DiseñoWeb #EducacionDigital #MarcaPersonal #IntrospectivaStudio

@@ -1,0 +1,5 @@
+Frame 1: captura de Florentin con rótulo «Proyecto · Educación e idiomas».
+
+Frame 2: tres etiquetas «Profesor / Clases / Recursos».
+
+Frame 3: enlace https://proyecto-florentin.vercel.app/.

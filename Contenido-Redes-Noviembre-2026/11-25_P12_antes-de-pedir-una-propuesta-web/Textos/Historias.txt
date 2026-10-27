@@ -1,0 +1,5 @@
+Frame 1: «¿Qué duda tienes antes de pedir una web?» con caja de preguntas opcional.
+
+Frame 2: «Alcance, materiales y responsabilidades: todo empieza ahí».
+
+Frame 3: compartir el carrusel y enlazar al contacto del estudio.

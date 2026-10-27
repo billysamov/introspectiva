@@ -1,0 +1,11 @@
+Un catálogo digital y una tienda con pago online responden a recorridos distintos. La elección debería partir de la operación comercial.
+
+En una venta consultiva puede ser necesario confirmar cantidades, disponibilidad o condiciones antes de cerrar un pedido. En ese contexto, las fichas de producto y un acceso claro al equipo comercial pueden formar un primer alcance útil.
+
+Una tienda con carrito añade decisiones sobre pagos, envíos, inventario y gestión de pedidos. Esas funciones requieren acordar procesos y responsabilidades, además de diseñar las pantallas.
+
+En Introspectiva revisamos estas necesidades antes de proponer una solución. Podemos comenzar con un catálogo orientado a consultas y definir una siguiente etapa si el negocio necesita incorporar compra online.
+
+La pregunta inicial es concreta: ¿qué información necesita tu cliente y qué debe ocurrir después de que elija un producto? Esa respuesta ayuda a dimensionar la experiencia que vas a construir.
+
+#SabiasQue #CatalogoDigital #Ecommerce #DiseñoWeb

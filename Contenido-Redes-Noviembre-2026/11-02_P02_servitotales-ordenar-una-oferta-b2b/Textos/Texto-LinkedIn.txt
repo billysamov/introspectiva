@@ -1,0 +1,11 @@
+Cuando una empresa B2B tiene una oferta amplia, la arquitectura de información forma parte de su presentación comercial.
+
+Servitotales reúne EPP, ferretería, suministros y maquinaria para compradores de industria, minería y construcción. El proyecto se presenta como una web corporativa con catálogo y accesos de consulta por WhatsApp.
+
+El recorrido conecta tres necesidades: conocer a la empresa, explorar sus líneas de negocio y continuar una conversación sobre productos concretos. Las categorías organizan la oferta; las imágenes aportan contexto; el contacto aparece vinculado a la exploración.
+
+Cada decisión puede recorrerse en la interfaz: desde elegir una línea de negocio hasta encontrar el canal de consulta. Esa relación entre contenido y contacto es el centro del proyecto.
+
+El carrusel recorre esas decisiones con piezas visuales del proyecto. Puedes explorar su contenido publicado en https://www.servitotales.com/.
+
+#DiseñoWeb #B2B #CatalogoDigital #IntrospectivaStudio
